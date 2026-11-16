@@ -1,0 +1,9 @@
+# The shell and Slurm scripts are executed on the remote Linux host, so their
+# line endings have to stay LF.
+#
+# ``tools/remote.py`` rewrites CRLF to LF during the upload, but it only does
+# that for files whose suffix is ".sh".  A ".sbatch" file would therefore be
+# uploaded with CRLF, and bash would choke on it.  The guarantee belongs here,
+# in the repository, rather than in the transport helper.
+*.sh     text eol=lf
+*.sbatch text eol=lf

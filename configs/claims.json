@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Q-LagrangeFlow (blueprint as written)",
+    "mechanism": "Physics-Guided Lagrangian deformable alignment + Hilbert/PEPS tensor interaction + frequency-decoupled conditional flow matching",
+    "sealed_direction": "hilbert_peps",
+    "new_observation_source": false,
+    "single_variable_control": false,
+    "single_peak_csi2": 0.1250,
+    "n_seeds": 0,
+    "batch_reproduced": null,
+    "epoch": null,
+    "pass_rate": null,
+    "baseline_pass_rate": null,
+    "paired_seed_diffs": null,
+    "two_level_bootstrap_ci": null,
+    "gain": null,
+    "collapse_end_ratio": null,
+    "peak_end_ratio": null
+  },
+  {
+    "name": "Module 1 · Physics-Guided Lagrangian Deformable Alignment (LTDA)",
+    "mechanism": "Sample aloft radar along 850 hPa wind drift and hydrometeor fall lag",
+    "sealed_direction": "wind_drift_alignment",
+    "new_observation_source": false,
+    "single_variable_control": false,
+    "n_seeds": 0,
+    "single_peak_csi2": null
+  },
+  {
+    "name": "Module 2 · Quantum-Inspired Hilbert / PEPS Interaction",
+    "mechanism": "Complex Hilbert fidelity + von Neumann entropy gate + 2D PEPS contraction",
+    "sealed_direction": "hilbert_peps",
+    "new_observation_source": false,
+    "single_variable_control": false,
+    "n_seeds": 0
+  },
+  {
+    "name": "Module 3 · Frequency-Decoupled Conditional Flow Matching (FDFM)",
+    "mechanism": "Generative high-frequency residual via latent ODE, conditioned on PEPS features",
+    "sealed_direction": "generative_flow",
+    "new_observation_source": false,
+    "single_variable_control": false,
+    "n_seeds": 0,
+    "single_peak_csi2": 0.1250
+  },
+  {
+    "name": "Same quantum coupler, renamed as a 'tendency gate'",
+    "mechanism": "Re-label the E02 Koopman coupler without adding an observation channel",
+    "sealed_direction": "quantum_coupling",
+    "new_observation_source": false,
+    "single_variable_control": false,
+    "n_seeds": 1,
+    "single_peak_csi2": 0.1010
+  },
+  {
+    "name": "CONTROL · fully-evidenced candidate (illustrative, not a result)",
+    "mechanism": "Introduces a genuinely new observation channel; single-variable control with real-channel parameter parity; 10 independent seeds; two-level paired bootstrap",
+    "sealed_direction": null,
+    "new_observation_source": true,
+    "single_variable_control": true,
+    "n_seeds": 10,
+    "batch_reproduced": true,
+    "batch_qpe0_pass_rate": 0.5,
+    "batch_base_concat_pass_rate": 0.4,
+    "batch_fisher_one_sided_p": 0.5,
+    "batch_peak_dispersion": 9.59,
+    "epoch": "ep00",
+    "pass_rate": 0.7,
+    "baseline_pass_rate": 0.5,
+    "paired_seed_diffs": [0.011, 0.008, 0.014, 0.009, 0.012, 0.010, 0.013, 0.007, 0.015, 0.011],
+    "two_level_bootstrap_ci": [0.002, 0.030],
+    "gain": 0.015,
+    "collapse_end_ratio": 2.1,
+    "peak_end_ratio": 11.0
+  }
+]

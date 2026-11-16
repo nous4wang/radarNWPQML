@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+.DS_Store
+
+# The copied upstream transport helper embeds a fallback SSH password.
+# Keep it local; never commit credentials into this repository.
+tools/remote.py
